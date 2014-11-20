@@ -1,0 +1,23 @@
+# people perception
+- git:
+    local-name: strands_perception_people
+    uri: https://github.com/strands-project/strands_perception_people.git
+    version: hydro-devel
+
+# QSR
+#- git:
+#    local-name: strands_qsr
+#    uri: https://github.com/strands-project/strands_qsr.git
+#    version: hydro-devel
+    
+# V4R
+- git:
+    local-name: v4r
+    uri: https://github.com/strands-project/v4r.git
+    version: hydro-devel
+
+- git:
+    local-name: strands_tabletop_perception
+    uri: https://github.com/strands-project/strands_tabletop_perception.git
+    version: hydro-devel
+
