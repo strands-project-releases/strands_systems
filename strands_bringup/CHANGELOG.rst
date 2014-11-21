@@ -2,6 +2,12 @@
 Changelog for package strands_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.6 (2014-11-21)
+------------------
+* Make the subsampling parameters configurable.
+* Same parameters as in movebase
+* Contributors: Lucas Beyer, Nils Bore
+
 0.0.5 (2014-11-20)
 ------------------
 * Pass-through the EBC port for docking.
