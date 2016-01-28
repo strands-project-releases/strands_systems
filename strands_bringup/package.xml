@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>strands_bringup</name>
-    <version>0.0.12</version>
+    <version>0.1.0</version>
     <description>The strands_bringup package</description>
 
     <maintainer email="pulidofentanes@gmail.com">Jaime Pulido Fentanes</maintainer>
@@ -25,6 +25,7 @@
     <run_depend>strands_navigation</run_depend>
     <run_depend>strands_ui</run_depend>
     <run_depend>strands_hri</run_depend>
+    <run_depend>openni2_launch</run_depend>
 
     <export>
 
