@@ -5,6 +5,7 @@
 	<arg name="with_mux" default="false" />
 	<arg name="js" default="$(optenv JOYSTICK_DEVICE /dev/js1)" />
 	<arg name="laser" default="/dev/ttyUSB0" />
+	<arg name="ptu" default="/dev/ttyS0" />
 	<arg name="scitos_config" default="$(find scitos_mira)/resources/SCITOSDriver.xml"/>
 	<arg name="with_magnetic_barrier" default="true"/>
 
@@ -32,11 +33,12 @@
 	<include file="$(find flir_pantilt_d46)/launch/ptu46.launch">
 	    <arg name="machine"  value="$(arg machine)"/>
 	    <arg name="user"  value="$(arg user)"/>
+	    <arg name="port"  value="$(arg ptu)"/>
 	</include>
 
 
 	<!-- PC Monitor -->
-	<node name="pc_monitor" pkg="scitos_pc_monitor" type="pc_monitor" />
+	<node name="pc_monitor" pkg="scitos_pc_monitor" type="pc_monitor" respawn="true"/>
 
 	<!-- Diagnostics aggregator -->
 	<include file="$(find scitos_bringup)/launch/diagnostic_agg.launch" >
