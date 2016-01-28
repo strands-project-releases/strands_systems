@@ -1,0 +1,121 @@
+ros-indigo-strands-bringup (0.1.0-0trusty) trusty; urgency=high
+
+  * add default to no_go_map
+  * Expose the PTU device as argument so it can be set on commandline.
+  * Add openni2_launch dependency.
+  * Enable depth registration on head_xtion.
+  * Switch to openni2_launch for cameras.
+  * Adding position injection parameter
+  * Adding respawn flag to strands_robot.launch
+  * Merge branch 'indigo-devel' of http://github.com/strands-project/strands_systems into indigo-devel
+  * Adding human_aware_navigation launch file to strands_navigation.launch
+  * Contributors: Bruno Lacerda, Chris Burbridge, Christian Dondrup, lucasb-eyer
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Thu, 28 Jan 2016 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.12-0trusty) trusty; urgency=high
+
+
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Tue, 28 Apr 2015 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.11-0trusty) trusty; urgency=high
+
+  * using door pass launch
+  * changing door passing node file name
+  * Add parameter to disable megnetic barrier.
+  * Contributors: Bruno Lacerda, Chris Burbridge
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Tue, 28 Apr 2015 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.10-0trusty) trusty; urgency=high
+
+  * Adding parmaters to start mary on different machine.
+  * Contributors: Christian Dondrup
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Fri, 10 Apr 2015 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.9-0trusty) trusty; urgency=high
+
+  * Setting default of with_human_aware to true
+    Now that https://github.com/strands-project/strands_hri/pull/91 is merged, human aware navigation dynamically subscribes and unsubscribes from the ppl perception pipeline. this means:
+    * If the edge uses human aware navigation, everything works as expected. While the robot is driving it subscribes to the ppl perception. If not goal is active it unsubscribes.
+    * If the edge uses move_base, human ware navigation is unsubscribed from the ppl perception, not causing any processing.
+    * If the ppl perception is not running, human aware navigation behaves like move_base + some gazing behaviour
+    Therefore, having it running by default does not cause additional load on the CPU if it is not used but it prevents confusion if it is used in the edge but not running.
+  * Adding strands_hri to package xml of strands_bringup.
+  * Added human_aware_navigation and dependencies to strands_navigation.launch. See #101 <https://github.com/strands-project/strands_systems/issues/101>. Default behaviour is unchanged. To run with human_aware_navigation, start with .
+  * indigo-0.0.8
+  * Contributors: Chris Burbridge, Christian Dondrup
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Tue, 24 Mar 2015 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.7-0trusty) trusty; urgency=high
+
+  * Include pc_monitor in robot bringup.
+    Includes the now released pc_monitor in the strands_robot launch file.
+  * removing config for monitored nav (its already a default and it looks like it doesnt work)
+  * Contributors: Bruno Lacerda, Chris Burbridge
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Fri, 09 Jan 2015 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.6-0trusty) trusty; urgency=high
+
+  * Make the subsampling parameters configurable.
+  * Same parameters as in movebase
+  * Contributors: Lucas Beyer, Nils Bore
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Fri, 21 Nov 2014 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.5-0trusty) trusty; urgency=high
+
+  * Pass-through the EBC port for docking.
+    DEFAULT TO NONE, ONLY ONE ROBOT HAS A LIGHT IN THERE.
+    Feels good to shout once in the morning.
+  * Contributors: Lucas Beyer
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Thu, 20 Nov 2014 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.4-0trusty) trusty; urgency=high
+
+  * Ability to include site-specific movebase parameters.
+  * Contributors: Lucas Beyer
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Wed, 19 Nov 2014 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.3-0trusty) trusty; urgency=high
+
+  * Fixing argument rename
+    This is wrong because both @nilsbore and me made PRs in parallel, so he didn't see my changes and I didn't see his.
+  * Update README.md
+  * Merge pull request #91 <https://github.com/strands-project/strands_systems/issues/91> from lucasb-eyer/hydro-devel
+    Changes needed by strands-project/strands_movebase#14 <https://github.com/strands-project/strands_movebase/issues/14>
+  * Added some more movebase parameters to strands_navigation
+  * Update to changes in strands_navigation/movebase
+  * Cleanup, while I'm at it.
+  * Contributors: Jaime Pulido Fentanes, Lucas Beyer, Marc Hanheide, Nils Bore
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Wed, 19 Nov 2014 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.2-0trusty) trusty; urgency=high
+
+  * adding changes to launch files example start script and new strands_mapping and strands_ui launch files
+  * splitting strands_cameras from strands robot
+  * Fixing #86 <https://github.com/strands-project/strands_systems/issues/86>
+    Amidoinitrite?
+  * Contributors: Jaime Pulido Fentanes, Lucas Beyer
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Fri, 14 Nov 2014 00:00:00 -0000
+
+ros-indigo-strands-bringup (0.0.1-0trusty) trusty; urgency=high
+
+  * removing head user
+  * Update README.md
+  * Create README.md
+  * bug fixes
+  * Creating strands_bringup removing strands_bob, strands_linda, strands_rosie, strands_uol_sim and strands_wernee
+  * Contributors: Jaime Pulido Fentanes
+
+ -- Jaime Pulido Fentanes <pulidofentanes@gmail.com>  Wed, 12 Nov 2014 00:00:00 -0000
+
+
