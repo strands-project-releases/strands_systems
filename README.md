@@ -1,3 +1,24 @@
+## strands_systems (indigo) - 0.1.0-0
+
+The packages in the `strands_systems` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --non-interactive -t indigo -r indigo strands_systems` on `Thu, 28 Jan 2016 11:09:58 -0000`
+
+The `strands_bringup` package was released.
+
+Version of package(s) in repository `strands_systems`:
+- upstream repository: https://github.com/strands-project/strands_systems.git
+- release repository: https://github.com/strands-project-releases/strands_systems.git
+- rosdistro version: `0.0.12-0`
+- old version: `0.0.12-0`
+- new version: `0.1.0-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.2`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.37`
+
+
 ## strands_systems (indigo) - 0.0.12-0
 
 The packages in the `strands_systems` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --non-interactive -t indigo -r indigo strands_systems` on `Tue, 28 Apr 2015 11:39:36 -0000`
